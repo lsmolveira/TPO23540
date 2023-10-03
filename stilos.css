@@ -1,0 +1,187 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    display:flex;
+    justify-content: center;
+    background-color: white;
+    height: 100px;
+}
+
+body{
+    background: rgb(7,0,36);
+    background: linear-gradient(0deg, rgba(7,0,36,1) 1%, rgba(65,28,255,0.4514180672268907) 51%);
+}
+
+
+header{
+    display: flex;
+    text-align: center;
+}
+/*BURGUER NAVBAR*/
+.navbar{
+    background-color: blueviolet;
+    height: 48px;
+    padding: 10px 12 px;
+    position: relative;
+}
+
+.checkbox, .icons{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    cursor:pointer;
+
+}
+.icons{
+    pointer-events: none;
+    font-size: 24px;
+}
+.checkbox{
+    opacity: 0;
+}
+
+.fi-br-cross{
+    display: none;
+}
+.checkbox:checked ~ .fi-br-menu-burger{
+    display: none;
+}
+.checkbox:checked ~ .fi-br-cross{
+    display: block;
+}
+.menu{
+    width: 200px;
+    top: 48px;
+    position: absolute;
+    right: 0px;
+    display: none;
+    
+
+}
+.menu li{
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    color:inherit;
+    background-color: rgb(69, 13, 133);
+    display: block;
+    padding: 10px 12px;
+}
+
+.menu li a:hover{
+    background-color: rgb(36, 4, 78);
+
+}
+.checkbox:checked ~ .menu{
+   display:block;
+   
+   
+}
+/*CARROUSEL*/
+
+  .slider-frame {
+	width: 100%; 
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*SERVICIOS CARDCONTAINER*/
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    
+  }
+  
+  .card {
+    width:20%; 
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card-header{
+    padding:5px;
+    text-align: center;
+    background: blueviolet;
+    color: #fff;
+}
+
+  .card-content {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .card-content {
+    opacity: 1; 
+  }
+  
+/* Probando responsive*/
+
+@media screen and (max-width: 1000px) {
+    .card {
+      width: 30%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+        .card {
+          width: 45%;
+        }
+        
+    }
+
+section a{
+    padding:10px;
+    text-align: center;
+}
